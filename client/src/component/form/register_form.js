@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import { PropTypes } from "prop-types";
 import "./form.css";
 import classnames from "classnames";
 import { withRouter } from "react-router-dom";
@@ -137,7 +137,7 @@ Register.PropTypes = {
 };
 
 const mapStateToProps = state => ({
-  auth: this.auth,
+  auth: state.auth,
   errors: state.errors
 });
 export default connect(
