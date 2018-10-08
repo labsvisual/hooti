@@ -35,3 +35,11 @@
     border: 1px solid black;
     color:black;
 }
+.userIcon{
+    margin-top:5px; 
+    float: right;
+    margin-right:80px;
+    padding: 5px;
+    width: 120px;
+    cursor:"pointer"
+}

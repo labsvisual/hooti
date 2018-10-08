@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import  './header.css';
 import {Link} from 'react-router-dom';
+import FontAwesome from 'react-fontawesome';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
@@ -31,6 +32,14 @@ class Header extends Component{
             </Link>
         ):null
     }
+    userIcon=()=>(
+        <div className="userIcon">
+            <FontAwesome name="user-circle"
+                size="2x"
+               
+            />
+        </div>
+    )
 
     render(){
         //const { isAuthenticated, user } = this.props.auth;

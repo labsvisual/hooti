@@ -33,7 +33,11 @@ class SearchCafe extends Component{
 
     render(){
         return(
-            <div className="seachcafe">
+            <div className="searchcafe"
+                style={{
+                    background:`url('/images/backgrounds/package.jpg')`
+                }}
+            >
                 <div className="searchlist">
                     <form onSubmit={this.handleSubmit}>
                         <input type="text" placeholder="search for a restaurant, cafe or club" onChange={this.handleChangeSearch} />
@@ -43,10 +47,8 @@ class SearchCafe extends Component{
                     </form>
                     
                 </div>
-                <div className="package"
-                    style={{
-                        background:`url('/images/backgrounds/package.jpg')`
-                    }}
+                {/* <div className="package"
+                    
                 >
                     <div className="packageText">
                         <h2>
@@ -58,7 +60,7 @@ class SearchCafe extends Component{
                             <strong>Rs</strong>799
                         </h2>
                     </div>
-                </div>
+                </div> */}
         
             </div>
         )
