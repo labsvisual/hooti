@@ -55,21 +55,29 @@ router.post("/register", (req, res) => {
   });
 });
 
-router.post("/restFind", (req, res) => {
+router.post("/restFindByReg", (req, res) => {
   console.log(req.body.name);
   console.log(typeof req.body.name);
 
-  Restaurant.find({ name: { $regex: req.body.name } }, { name: 1 }).then(
-    rest => {
-      console.log(rest);
+  Restaurant.find({ name: { $regex: req.body.name } }).then(rest => {
+    console.log(rest);
 
-      if (rest) {
-        res.json({
-          name: rest.name
-        });
-      }
+    if (rest) {
+      res.json({
+        rest
+      });
     }
-  );
+  });
+});
+
+router.post("/restFindByCuisine", (req, res) => {
+  Restaurant.find({ tags: req.body.tags })
+    .then(rest => {
+      if (rest) {
+        res.json(rest);
+      }
+    })
+    .catch(err => res.json("Restaurant not found."));
 });
 
 module.exports = router;
