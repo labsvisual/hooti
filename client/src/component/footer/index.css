@@ -1,0 +1,151 @@
+/* css for footer one */
+.one{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+    height: 30px;
+    font-weight: 400;
+    padding:1% 0;
+    margin: 0 auto;
+    font-size: 15px;
+    margin-top: 20px;
+    border-top: 1px solid rgb(169, 171, 175);
+    border-bottom: 1px solid rgb(169, 171, 175);
+    color: rgb(130, 132, 134);
+    
+}
+.one li{
+    width: 15%;
+    padding: 5px 5px;
+    float: left;
+    cursor: pointer;
+}
+.one li:hover{
+    color: rgb(230, 38, 38);
+}
+.one-wrapper{
+    margin-left:10%;
+}
+.bar-of-one{
+    height: 30px;
+    float: left;
+    width: 1px;
+    margin: 0 20px;
+    background: rgb(130, 132, 134);
+}
+
+
+
+/* css for footer two */
+
+.two{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+    height: 80px;
+    font-weight: 400;
+    padding:1% 0;
+    margin: 0 auto;
+    font-size: 15px;
+    margin: 50px 0;
+    color: rgb(130, 132, 134);
+    
+}
+.two-wrapper{
+    width: 20%;
+    float: left;
+    margin-left:2%; 
+}
+.two li{
+    width: max-content;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+.two-wrapper li:hover{
+    color: rgb(230, 38, 38);
+}
+
+.bar-of-two{
+    margin-left:10%;
+    height: 100px;
+    float: left;
+    width: 1px;
+    background: rgb(169, 171, 175);
+}
+
+/* css for footer three */
+
+
+.three{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    width: 80%;
+    height: 100px;
+    font-weight: 400;
+    padding:1% 0;
+    margin: 0 auto;
+    font-size: 15px;
+    margin-top: 50px;
+    border-top: 1px solid rgb(169, 171, 175);
+    border-bottom: 1px solid rgb(169, 171, 175);
+    color: rgb(130, 132, 134);
+    text-align: center;
+    cursor: pointer;
+}
+.three-wrapper{
+    width: 20%;
+    float: left;
+    margin-left:8%; 
+}
+.three li{
+    padding: 5px 5px;
+    
+    font-size: 12px;
+}
+.bar-of-three{
+    height: 70px;
+    float: left;
+    width: 1px;
+    margin: 1% 3%;
+    background: rgb(169, 171, 175);
+}
+
+
+
+
+/* css of footer four */
+.four{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+    height: 10px;
+    font-weight: 400;
+    padding:1% 0;
+    margin: 0 auto;
+    font-size: 15px;
+    margin-top: 50px;
+    border-top: 1px solid rgb(169, 171, 175);
+    color: rgb(130, 132, 134);
+    text-align: center;
+    cursor: pointer;
+}
+.four-wrapper{
+    width: 20%;
+    float: left;
+    margin-left:8%; 
+}
+.icon{
+    color: rgb(130, 132, 134);
+    float: left;
+    margin: 5px; 
+}
+.icon:hover{
+    color: rgb(230, 38, 38);
+}
+.four-wrapper li{
+    font-size: 10px;
+}

@@ -11,7 +11,7 @@ import Home from './component/home/home';
 import Layout from './hoc/layout';
 import Login from './component/form/login_form';
 import Register from './component/form/register_form';
-
+import CafeMenu from './component/cafemenu/cafemenu';
 if (localStorage.jwtToken) {
     //set token
     setAuthToken(localStorage.jwtToken);
@@ -40,6 +40,7 @@ const Routes=()=>{
                     <Route path="/" exact component={Home} />
                     <Route path="/login" exact component={Login}/>
                     <Route path="/register" exact component={Register}/>
+                    <Route path="/:id" exact component={CafeMenu}/>
                 </Switch>
            </Layout>
         </Provider>
