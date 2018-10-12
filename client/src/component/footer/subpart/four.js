@@ -15,7 +15,7 @@ const Four=()=>{
                 />
             </div>
         ))
-        console.log(i);
+    
         return i;
     }
     

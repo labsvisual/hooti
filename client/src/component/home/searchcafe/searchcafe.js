@@ -1,12 +1,17 @@
 import React,{Component} from 'react';
 import './searchcafe.css';
+import FontAwesome from 'react-fontawesome';
 
 class SearchCafe extends Component{
 
-    state={
-        searchname:'',
-        date:'',
-        capacity:''
+    constructor(){
+        super();
+        this.state={
+            searchname:'',
+            date:'',
+            capacity:'',
+            showResult:false
+        }
     }
 
     handleChangeSearch=(event)=>{
@@ -28,7 +33,46 @@ class SearchCafe extends Component{
 
     handleSubmit=(event)=>{
         event.preventDefault();
-        console.log(this.state);
+        const searchData={
+            searchname:this.state.searchname,
+            date:this.state.date,
+            capacity:this.state.capacity
+        }
+        console.log(searchData);
+        
+    }
+    handleResult=(val)=>{
+        this.setState({
+            showResult:val
+        })
+    }
+    result=()=>{
+
+        const arr=[{
+            name:'whatever',
+            location:'hell'
+        },
+        {
+            name:'whatever',
+            location:'hell'
+        },
+        {
+            name:'whatever',
+            location:'hell'
+        }]
+        let returnList=arr.map((i)=>(
+                    <div className="result-list" >
+                        
+                        <li><FontAwesome name="glass" /><b>{i.name}</b></li>
+                        <li>{i.location}</li>
+                    </div>
+                ));
+
+        return(
+            <div className="result">
+                {returnList}
+            </div>
+        )
     }
 
     render(){
@@ -40,13 +84,20 @@ class SearchCafe extends Component{
             >
                 <div className="searchlist">
                     <form onSubmit={this.handleSubmit}>
-                        <input type="text" placeholder="search for a restaurant, cafe or club" onChange={this.handleChangeSearch} />
+                        <input type="text"
+                            placeholder="search for a restaurant, cafe or club" 
+                            onChange={this.handleChangeSearch}
+                            onFocus={(e)=>this.handleResult(true)}
+                            onBlur={(e)=>this.handleResult(false)} 
+                            value={this.state.searchname}
+                        />
                         <input type="date" onChange={this.handleChangeDate} />
                         <input type="number" onChange={this.handleChangeCapacity} defaultValue="1"/>
                         <input type="submit" value="Search Hooti" />
                     </form>
-                    
+                    {this.state.showResult?this.result():null}
                 </div>
+                
                 {/* <div className="package"
                     
                 >
