@@ -37,4 +37,5 @@ const RestSchema = new Schema({
   }
 });
 
-module.exports = Rest = mongoose.model("rest", RestSchema);
+const RestModel = mongoose.model('rest', RestSchema);
+export default RestModel;
